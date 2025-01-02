@@ -11,6 +11,10 @@ const userStates = new Map();
 
 connectDB()
 
+bot.telegram.setMyCommands([
+    { command: 'start', description: 'Botni ishga tushirish' }
+]);
+
 bot.start(async (ctx) => {
 	try {
 		const userId = ctx.from.id;
