@@ -30,7 +30,8 @@ bot.start(async (ctx) => {
 			await User.create({userId, username, first_name})
 		}
 
-		const message = await ctx.replyWithHTML(`Hi <b>${ctx.from.first_name}</b>! You can add your todos here`, startKeyboard)
+		await ctx.replyWithHTML(`Hi <b>${ctx.from.first_name}</b>!`)
+	    const message = await ctx.replyWithHTML(`Manage your todos here`, startKeyboard)
 		messageId = message.message_id
 	} catch (error) {
 		console.log(error);
